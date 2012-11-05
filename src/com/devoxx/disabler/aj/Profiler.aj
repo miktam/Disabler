@@ -13,8 +13,7 @@ public aspect Profiler {
 
 		String threadName = Thread.currentThread().getName();
 
-		Log.i(TAG, threadName + "|"
-				+ thisJoinPointStaticPart.getSignature().toString());
+		Log.i(TAG, threadName + "|" + thisJoinPointStaticPart.getSignature().toString());
 
 		long start = System.currentTimeMillis();
 		try {
@@ -23,8 +22,7 @@ public aspect Profiler {
 
 			long end = System.currentTimeMillis();
 
-			Log.i(TAG, threadName + "|"
-					+ thisJoinPointStaticPart.getSignature() + (end - start) + " ms");
+			Log.i(TAG, threadName + "|" + thisJoinPointStaticPart.getSignature() + (end - start) + " ms");
 
 		}
 	}
