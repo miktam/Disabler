@@ -1,4 +1,6 @@
-package com.mot.disabler;
+package com.devoxx.disabler;
+
+import com.devoxx.disabler.R;
 
 import android.os.Bundle;
 import android.app.Activity;
