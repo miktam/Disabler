@@ -2,29 +2,26 @@ package com.devoxx.disabler.aj;
 
 import android.util.Log;
 
+/**
+ * Profile method in given package
+ */
 public aspect Profiler {
 
 	String TAG = Profiler.class.getSimpleName();
 
 	pointcut methodCalls(): 
-  execution(* com..*(..));
+		execution(* com..*(..));
 
-	Object around() : methodCalls() {
-
-		String threadName = Thread.currentThread().getName();
-
-		Log.i(TAG, threadName + "|" + thisJoinPointStaticPart.getSignature().toString());
-
-		long start = System.currentTimeMillis();
-		try {
-			return proceed();
-		} finally {
-
-			long end = System.currentTimeMillis();
-
-			Log.i(TAG, threadName + "|" + thisJoinPointStaticPart.getSignature() + (end - start) + " ms");
-
+		Object around() : methodCalls() {
+			StringBuffer buf = new StringBuffer();
+			buf.append("Thread \"" + Thread.currentThread().getName() + "\" executed " + thisJoinPointStaticPart.getSignature().getName());
+			long start = System.currentTimeMillis();
+			try {
+				return proceed();
+			} finally {
+				long end = System.currentTimeMillis();
+				buf.append(" in " + (end - start) + " ms");
+				Log.v(TAG, buf.toString());
+			}
 		}
-	}
-
 }
