@@ -17,8 +17,7 @@ public aspect Logger {
 	String TAG = Logger.class.getSimpleName();
 
 	pointcut enterMethod(): 
-		target(com.devoxx.disabler.Disabler);
-
+		execution(String[] *());
 			before() : enterMethod() {
 				// thisJoinPoint has state available at a join point and static information about it
 				// more info on available methods in thisJoinPoint
@@ -26,7 +25,11 @@ public aspect Logger {
 				Object[] params = thisJoinPoint.getArgs(); 
 				Signature sig = thisJoinPoint.getSignature();	
 				Log.i(TAG, "Enter " + sig.getName() + " with params: " + Arrays.asList(params));				
-	}			
+	}				
+			after() : enterMethod() {				
+				Signature sig = thisJoinPoint.getSignature();	
+				Log.i(TAG, "Exit " + sig.getName());				
+	}	
 
 
 }
