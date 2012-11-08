@@ -81,7 +81,7 @@ Default .project file for Eclipse for default Android project
             </arguments>
         </buildCommand>
         <buildCommand>
-            <name>org.eclipse.ajdt.core.ajbuilder</name>
+            <name>org.eclipse.jdt.core.javabuilder</name>
             <arguments>
             </arguments>
         </buildCommand>
