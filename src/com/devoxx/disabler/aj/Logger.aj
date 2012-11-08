@@ -12,7 +12,8 @@ import android.util.Log;
  * http://www.eclipse.org/aspectj/doc/next/progguide/language-thisJoinPoint.html
  * 
  */
-public aspect Logger {
+// TODO logger
+abstract public aspect Logger {
 
 	String TAG = Logger.class.getSimpleName();
 
