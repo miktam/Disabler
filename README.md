@@ -15,3 +15,85 @@ Main functionality of the tool:
 Dependencies:
 * [Eclipse]
 * [AspectJ]
+
+Customized .project file for Eclipse
+-
+```xml
+<?xml version="1.0" encoding="UTF-8"?>
+<projectDescription>
+    <name>Disabler</name>
+    <comment></comment>
+    <projects>
+    </projects>
+    <buildSpec>
+        <buildCommand>
+            <name>org.eclipse.ajdt.core.ajbuilder</name>
+            <arguments>
+            </arguments>
+        </buildCommand>
+        <buildCommand>
+            <name>com.android.ide.eclipse.adt.ResourceManagerBuilder</name>
+            <arguments>
+            </arguments>
+        </buildCommand>
+        <buildCommand>
+            <name>com.android.ide.eclipse.adt.PreCompilerBuilder</name>
+            <arguments>
+            </arguments>
+        </buildCommand>
+        <buildCommand>
+            <name>org.eclipse.ajdt.core.ajbuilder</name>
+            <arguments>
+            </arguments>
+        </buildCommand>
+        <buildCommand>
+            <name>com.android.ide.eclipse.adt.ApkBuilder</name>
+            <arguments>
+            </arguments>
+        </buildCommand>
+    </buildSpec>
+    <natures>
+        <nature>org.eclipse.ajdt.ui.ajnature</nature>
+        <nature>com.android.ide.eclipse.adt.AndroidNature</nature>
+        <nature>org.eclipse.jdt.core.javanature</nature>
+    </natures>
+</projectDescription>
+```
+
+Default .project file for Eclipse for default Android project
+-
+```xml
+<?xml version="1.0" encoding="UTF-8"?>
+<projectDescription>
+    <name>Disabler</name>
+    <comment></comment>
+    <projects>
+    </projects>
+    <buildSpec>
+        <buildCommand>
+            <name>com.android.ide.eclipse.adt.ResourceManagerBuilder</name>
+            <arguments>
+            </arguments>
+        </buildCommand>
+        <buildCommand>
+            <name>com.android.ide.eclipse.adt.PreCompilerBuilder</name>
+            <arguments>
+            </arguments>
+        </buildCommand>
+        <buildCommand>
+            <name>org.eclipse.ajdt.core.ajbuilder</name>
+            <arguments>
+            </arguments>
+        </buildCommand>
+        <buildCommand>
+            <name>com.android.ide.eclipse.adt.ApkBuilder</name>
+            <arguments>
+            </arguments>
+        </buildCommand>
+    </buildSpec>
+    <natures>
+        <nature>com.android.ide.eclipse.adt.AndroidNature</nature>
+        <nature>org.eclipse.jdt.core.javanature</nature>
+    </natures>
+</projectDescription>
+```
