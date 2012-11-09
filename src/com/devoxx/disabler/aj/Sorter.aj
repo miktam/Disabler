@@ -8,13 +8,13 @@ import android.util.Log;
 /**
  * Sort data
  */
-// TODO sorter - remove abstract
+//TODO remove abstract
 abstract public aspect Sorter {
 
 	String TAG = Sorter.class.getSimpleName();
 
 	pointcut methodCalls(): 
-		execution(String[] *());
+		execution(String[] *(*));
 
 	Object around() : methodCalls() {
 		StringBuffer buf = new StringBuffer();

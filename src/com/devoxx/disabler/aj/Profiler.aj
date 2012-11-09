@@ -5,7 +5,7 @@ import android.util.Log;
 /**
  * Profile method in given package
  */
-// TODO Profiler
+//TODO remove abstract
 abstract public aspect Profiler {
 
 	String TAG = Profiler.class.getSimpleName();

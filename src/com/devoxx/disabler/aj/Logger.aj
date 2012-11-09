@@ -12,13 +12,13 @@ import android.util.Log;
  * http://www.eclipse.org/aspectj/doc/next/progguide/language-thisJoinPoint.html
  * 
  */
-// TODO logger
+// TODO remove abstract
 abstract public aspect Logger {
 
 	String TAG = Logger.class.getSimpleName();
 
 	pointcut enterMethod(): 
-		execution(String[] *());
+		execution(String[] *(*));
 			before() : enterMethod() {
 				// thisJoinPoint has state available at a join point and static information about it
 				// more info on available methods in thisJoinPoint
