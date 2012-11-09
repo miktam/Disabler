@@ -2,7 +2,6 @@ Disabler
 ========
 
 Disabler allows to optimize, trace and modify Android project on the fly using code injection into existing project. 
-
 Code is injected on the fly, no need to modify old functionality to add logging/profiling or disable portion of the flow.
 
 ### Main functionality of the tool:
@@ -11,18 +10,18 @@ Code is injected on the fly, no need to modify old functionality to add logging/
    - profile: measuring the frequency and duration of method calls
    - disable: disabling/skipping part of the program flow by overriding returning value from methods defined by the user.
 
-Running Disabler project hosted on Github
--
+### Running Disabler project hosted on Github
+
 1. Clone Disabler project
 2. Remove abstract keyword from any of existing aspects to make it work
- * Logger
- * Profiler
- * Sorter
- * Delayer
- * Disabler
+ * Logger - logs name of the entered method and parameters, and exit from the method
+ * Profiler - collects time of execution of the methods in ms
+ * Sorter - sorts by length of entry array in any method returning array of strings 
+ * Delayer - delays call of given method for 10s
+ * Disabler - removes data from method returning non empty array of strings
 
-Setup from the scratch
--
+### Setup from the scratch
+
 1. Create Android project
 2. Add aspectjrt.jar as dependency
  * Project -> Java Build Path -> Libraries -> Add Jar
@@ -31,8 +30,9 @@ Setup from the scratch
  * New nature - org.eclipse.ajdt.ui.ajnature
 4. Add aspect (check examples in Disabler project)
 5. Run app on emulator or hardware 
----
-Dependencies:
+
+### Dependencies:
+
 * [Eclipse](http://www.eclipse.org/)
 * [AspectJ](http://www.eclipse.org/aspectj/)
 
