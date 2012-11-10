@@ -64,11 +64,6 @@ Customized .project file for Eclipse
             </arguments>
         </buildCommand>
         <buildCommand>
-            <name>org.eclipse.ajdt.core.ajbuilder</name>
-            <arguments>
-            </arguments>
-        </buildCommand>
-        <buildCommand>
             <name>com.android.ide.eclipse.adt.ApkBuilder</name>
             <arguments>
             </arguments>
