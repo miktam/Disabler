@@ -1,5 +1,6 @@
-Disabler
-========
+### Devoxx 2012
+
+App was presented on Devoxx 2012 during [Code Injection in Android](http://www.devoxx.com/display/DV12/Code+injection+in++Android) talk
 
 Disabler allows to optimize, trace and modify Android project on the fly using code injection into existing project. 
 Code is injected on the fly, no need to modify old functionality to add logging/profiling or disable portion of the flow.
